@@ -1,5 +1,5 @@
-require 'pry'
 class Capitals
+  require 'pry'
  def initialize
    @states = {"Oregon" => "OR",
       "Alabama" => "AL",
