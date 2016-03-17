@@ -25,3 +25,14 @@
 #body {
   background-color: pink;
 }
+#email{
+  float: center;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  background-color: grey;
+  padding: 14px 50px;
+}
+#div{
+  background-color: coral;
+}
