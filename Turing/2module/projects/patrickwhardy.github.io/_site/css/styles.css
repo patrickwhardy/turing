@@ -25,14 +25,24 @@
 #body {
   background-color: pink;
 }
-#email{
-  float: center;
-  padding: 5px;
-  display: block;
-  text-align: center;
+
+#email {
+  margin: 100;
+  padding: 0;
+  overflow: hidden;
   background-color: grey;
-  padding: 14px 50px;
 }
-#div{
+
+#pagetitle {
+  margin: 100;
+  padding: 0;
+  overflow: hidden;
+  background-color: coral;
+}
+
+#posticon {
+  margin: 100;
+  padding: 0;
+  overflow: hidden;
   background-color: coral;
 }
