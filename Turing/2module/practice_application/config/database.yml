@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+  pool: 5
+
+development:
+  <<: *default
+  database: practice_application_development
+
+test:
+  <<: *default
+  database: practice_application_test
+
+production:
+  <<: *default
+  database: practice_application_production
+  username: practice_application
+  password: <%= ENV['PRACTICE_APPLICATION_DATABASE_PASSWORD'] %>

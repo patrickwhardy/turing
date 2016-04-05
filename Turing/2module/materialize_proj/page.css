@@ -1,0 +1,20 @@
+h3 {
+  text-align: center;
+}
+
+body {
+    background-image: url("http://www.mountainphotography.com/images/xl/20120928-Cimarron-Sunset-Panorama.jpg");
+    background-color: #cccccc;
+    /*background-size: 2000px 1000px;*/
+}
+
+.table {
+  background-color: grey;
+}
+
+/*div {
+    background: url("http://wallpaperlayer.com/img/2015/8/desktop-backgrounds-6411-6687-hd-wallpapers.jpg");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    text-align: center;
+}*/
