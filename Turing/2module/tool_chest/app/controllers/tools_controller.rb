@@ -1,7 +1,8 @@
 class ToolsController < ApplicationController
 
   def index
-    @tools = User.tools
+    @user = User.find(params[:user_id])
+    @tools = @user.tools
   end
 
   def destroy
@@ -10,7 +11,8 @@ class ToolsController < ApplicationController
   end
 
   def new
-    @tool = Tool.new
+    @user = User.find(params[:user_id])
+    @tool = @artist.tools.new
   end
 
   def create

@@ -11,9 +11,9 @@ class UserCanLogInTest < ActionDispatch::IntegrationTest
     fill_in "Password", with: "password"
     # save_and_open_page
     click_button "Save Session"
-
-    assert tools_path, current_path
-    byebug
+# byebug
+# save_and_open_page
+    assert user_tools_path, current_path
     page.assert_selector(".notice", text: "Welcome patrick")
   end
 end
