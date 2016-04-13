@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405200536) do
+ActiveRecord::Schema.define(version: 20160406145003) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "student_id"
@@ -19,8 +19,27 @@ ActiveRecord::Schema.define(version: 20160405200536) do
 
   add_index "addresses", ["student_id"], name: "index_addresses_on_student_id"
 
-  create_table "students", force: :cascade do |t|
-    t.boolean "is_alumni", default: false
+  create_table "courses", force: :cascade do |t|
+    t.text    "name"
+    t.integer "enrollment_id"
   end
+
+  add_index "courses", ["enrollment_id"], name: "index_courses_on_enrollment_id"
+
+  create_table "enrollments", force: :cascade do |t|
+    t.integer "courses_id"
+    t.integer "students_id"
+  end
+
+  add_index "enrollments", ["courses_id"], name: "index_enrollments_on_courses_id"
+  add_index "enrollments", ["students_id"], name: "index_enrollments_on_students_id"
+
+  create_table "students", force: :cascade do |t|
+    t.boolean "is_alumni",     default: false
+    t.text    "name"
+    t.integer "enrollment_id"
+  end
+
+  add_index "students", ["enrollment_id"], name: "index_students_on_enrollment_id"
 
 end

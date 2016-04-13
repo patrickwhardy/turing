@@ -1,0 +1,13 @@
+<h1>Edit this Mountain</h1>
+<%= form_for(@fourteener) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :elevation %>
+  <%= f.text_field :elevation %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,4 @@
+<h1><%= "#{@fourteener.name}: #{@fourteener.elevation}ft" %></h1>
+<%= image_tag @fourteener.image %>
+<%= link_to "Edit", edit_fourteener_path(@fourteener) %>
+<%= link_to "Delete", fourteener_path(@fourteener), method: :delete %>
