@@ -3,10 +3,16 @@
 <div class="notice">
   <%= flash[:notice] %>
 </div>
+<div class="error">
+  <%= flash[:error] %>
+</div>
 
-<%= link_to "Create New Tool", new_tool_path %>
+<%= link_to "Create New Tool", new_user_tool_path %>
 
+<div class="tool_info">
 <% @tools.each do |tool| %>
-  <p><%= link_to "#{tool.name}", tool_path(tool.id) %>
-  <%= tool.quantity %></p>
+  <p><%= link_to "#{tool.name}", user_tool_path(@user, tool) %>
+  price: <%= tool.price %>
+  quantity: <%= tool.quantity %></p>
 <% end %>
+</div>

@@ -7,28 +7,29 @@ class ToolsController < ApplicationController
 
   def destroy
     Tool.find(params[:id]).destroy
-    redirect_to tools_path
+    redirect_to user_tools_path
   end
 
   def new
     @user = User.find(params[:user_id])
-    @tool = @artist.tools.new
+    @tool = @user.tools.new
   end
 
   def create
-    @tool = Tool.new(tool_params)
+    @user = User.find(params[:user_id])
+    @tool = @user.tools.new(tool_params)
     if @tool.save
       session[:most_recent_tool_id] = @tool.id
       flash[:notice] = "you have successfully created a tool"
-      redirect_to tool_path(@tool.id)
+      redirect_to user_tools_path(@user)
     else
       flash[:error] = @tool.errors.full_messages.join(", ")
-      redirect_to new_tool_path
+      redirect_to new_user_tool_path
     end
   end
 
   def show
-    @tool = Tool.find(params[:id])
+    @tool = User.tools.find(params[:id])
   end
 
   # def clear_session

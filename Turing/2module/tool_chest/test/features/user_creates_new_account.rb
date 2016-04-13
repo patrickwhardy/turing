@@ -14,8 +14,6 @@ class UserCreatesAccountTest < ActionDispatch::IntegrationTest
 
     click_button "Create User"
 
-    assert_equal tools_path, current_path
     page.assert_selector(".notice", text: "Welcome Patrick1412")
   end
-
 end
