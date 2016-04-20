@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  low_temp: 1
+  high_temp: 1
+  wind_speed: 1
+  cloud_cover: 1
+  description: MyString
+
+two:
+  name: MyString
+  low_temp: 1
+  high_temp: 1
+  wind_speed: 1
+  cloud_cover: 1
+  description: MyString
