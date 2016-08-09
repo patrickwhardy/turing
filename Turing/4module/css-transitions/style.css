@@ -1,0 +1,48 @@
+div .boxes {
+    background-color: yellow;
+    border-radius: 30px;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    /*transition-property: background-color, border-radius;
+    transition-duration: 2s;
+    transition-timing-function: ease;*/
+}
+
+/*div:hover {
+    background-color: green;
+    border-radius: 200px;
+}*/
+
+.container {
+  border: 1px solid grey;
+  height: 400px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.container:hover .box {
+    background: green;
+    margin-left: 75%;
+}
+
+. {
+  background-color: yellow;
+  border-radius: 30px;
+  height: 300px;
+  width: 25%;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(1, -1, 1, .5);
+}
+
+div .a {
+  transition-delay: 0s;
+  margin: 20px;
+}
+div .b {
+  transition-delay: 1s;
+  margin: 80px;
+}
+div .c { transition-delay: 2s; }
+div .d { transition-delay: 3s; }
